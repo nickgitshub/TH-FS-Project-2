@@ -117,3 +117,10 @@ body{
       background-color: #4ba6c3;
       color: #fff;
     }
+
+.not-found{
+  text-align: center;
+  color: #4ba6c3;
+  font-size: 18px;
+
+}
