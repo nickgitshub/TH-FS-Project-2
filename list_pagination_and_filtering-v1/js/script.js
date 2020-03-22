@@ -134,7 +134,7 @@ function searchStudents(event){
   search_list = [];
   for(let i = 0; i<li_list.length; i++){
     const student_li= li_list[i];
-    const string_search = student_li.querySelector('h3').innerText.search(input);
+    const string_search = student_li.querySelector('h3').innerText.indexOf(input);
     if(string_search > -1){
       search_list.push(student_li);
     } 
@@ -153,7 +153,7 @@ function searchStudents(event){
   }
 
   //removes the the old paginated div
-  old_div = document.getElementsByClassName("paginated-div")[0];
+  old_div = document.getElementsByClassName("paginated-div")[0]
   if (old_div != undefined) {
     old_div.remove();
   };
