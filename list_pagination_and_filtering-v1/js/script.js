@@ -9,8 +9,8 @@ FSJS project 2 - List Filter and Pagination
    -Will be used at the bottom to initialize main functions
 ***/
 
-const li_list = document.querySelector('.student-list').getElementsByTagName("LI")
-const input_box = document.querySelector('input')
+const li_list = document.querySelector('.student-list').getElementsByTagName("LI");
+const input_box = document.querySelector('input');
 
 
 /*** 
@@ -26,11 +26,11 @@ function displayChange(element, display_state){
 //shows a page of 10 elements by turning the display to 'None' for all
 //elements that are not supposed to be on the current_page
 function showPage(current_page, list, list_length){
-  const end_point = current_page*10
-  const start_point = end_point-10
+  const end_point = current_page*10;
+  const start_point = end_point-10;
 
   for(let i = 0; i<list_length; i ++){
-    const student_li= list[i]
+    const student_li= list[i];
 
     if(i < start_point || i >= end_point){
       displayChange(student_li, 'None');
@@ -38,9 +38,9 @@ function showPage(current_page, list, list_length){
     else{
       displayChange(student_li, '');
 
-    } 
-  } 
-}
+    };
+  }; 
+};
 
 /*** 
    MAIN FUNCTIONS
@@ -74,8 +74,8 @@ function appendPages(list){
     }
 
     //creating a div, new ul, and li elements prior to appending them together
-    const page = document.getElementsByClassName("page")[0]
-    const div = element_creator("DIV", 'paginated-div')
+    const page = document.getElementsByClassName("page")[0];
+    const div = element_creator("DIV", 'paginated-div');
     const ul =  element_creator("UL", 'pagination');
 
     for (let i=0; i<num_pages; i++){
@@ -90,7 +90,7 @@ function appendPages(list){
 
   
     //make the first number in the first li element's anchor class active
-    ul.querySelector("a").className = 'active'
+    ul.querySelector("a").className = 'active';
 
 
     //page numbers listening for what page number they should show
@@ -111,7 +111,7 @@ function appendPages(list){
   }
 
   //initiates the load execution on the first page of listed elements
-  showPage(1, list, list_length)
+  showPage(1, list, list_length);
 }
 
 
